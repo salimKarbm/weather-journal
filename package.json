@@ -1,0 +1,25 @@
+{
+  "name": "weather-journal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salimKarbm/weather-journal.git"
+  },
+  "author": "salim imuzai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salimKarbm/weather-journal/issues"
+  },
+  "homepage": "https://github.com/salimKarbm/weather-journal#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
