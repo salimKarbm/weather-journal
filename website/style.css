@@ -1,1 +1,108 @@
-
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+section {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  background-color: #132e4b;
+  align-items: center;
+  padding: 1em 0em;
+}
+.header h1 {
+  padding: 0;
+  margin: 0;
+  word-spacing: 0.8em;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.logo {
+  width: 8vw;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 5em;
+}
+.error-message {
+  text-align: center;
+  background-color: pink;
+  font-size: 1em;
+  padding: 0.5em 0;
+  color: black;
+  text-transform: capitalize;
+}
+.success-message {
+  text-align: center;
+  background-color: lightgreen;
+  font-size: 1em;
+  padding: 0.5em 0;
+  color: black;
+  text-transform: capitalize;
+}
+.result {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8em;
+  text-transform: capitalize;
+  gap: 1em;
+  background-color: slategrey;
+  display: none;
+  padding: 0 1em;
+}
+#loader {
+  margin: 1em 0 0 0;
+  text-align: center;
+  display: none;
+}
+.result div {
+  margin-bottom: 1em;
+  color: black;
+}
+.result span {
+  color: #fff;
+}
+.result h2 {
+  color: #fff;
+  text-align: center;
+}
+input[type='text'],
+input[type='date'],
+textarea {
+  width: 40vw;
+  background-color: #f8f8f8;
+  font-size: 1.5em;
+  padding: 0.5em 0.5em;
+  color: #333;
+}
+input::placeholder,
+input[type='date'],
+textarea::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+textarea {
+  min-height: 20vh;
+}
+.form-button {
+  display: flex;
+  justify-content: center;
+}
+.form-group {
+  margin: 1em 0;
+}
+button {
+  background-color: #ec6d09;
+  padding: 1em 2em;
+  color: antiquewhite;
+  width: 20vw;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  border-radius: 15em;
+}
