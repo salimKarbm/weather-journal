@@ -1,13 +1,12 @@
 body {
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: center;
   font-family: sans-serif;
 }
 section {
   display: flex;
-  width: 50vw;
+  width: 100vw;
+  min-height: 100vh;
   flex-direction: column;
   background-color: #132e4b;
   align-items: center;
@@ -75,7 +74,7 @@ main {
 input[type='text'],
 input[type='date'],
 textarea {
-  width: 40vw;
+  min-width: 40vw;
   background-color: #f8f8f8;
   font-size: 1.5em;
   padding: 0.5em 0.5em;
@@ -105,4 +104,67 @@ button {
   text-transform: capitalize;
   font-size: 1.2em;
   border-radius: 15em;
+}
+@media only screen and (max-width: 1024px) {
+  input[type='text'],
+  input[type='date'],
+  textarea {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header h1 {
+    padding: 0;
+    margin: 0;
+    word-spacing: 0.8em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  input[type='text'],
+  input[type='date'],
+  textarea {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .header h1 {
+    text-align: center;
+  }
+  button {
+    width: 40vw;
+  }
+  .logo {
+    width: 18vw;
+  }
+  form {
+    width: 60vw;
+  }
+
+  input[type='text'],
+  input[type='date'],
+  textarea {
+    width: 55vw;
+  }
+}
+@media only screen and (max-width: 320px) {
+  button {
+    width: 45vw;
+    font-size: 1em;
+  }
+  .logo {
+    width: 20vw;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    width: 40vw;
+  }
+
+  input[type='text'],
+  input[type='date'],
+  textarea {
+    width: 55vw;
+  }
 }

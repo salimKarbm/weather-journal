@@ -19,11 +19,11 @@ generateBtn.addEventListener('click', function (e) {
 //event lister generate function
 function generate() {
   //Get country input value
-  const country = document.querySelector('#country').value
+  const country = document.querySelector('#country').value.trim()
   //Get weather condition input value
-  const weatherCondition = document.querySelector('#condition').value
+  const weatherCondition = document.querySelector('#condition').value.trim()
   //Get date input value
-  const date = document.querySelector('#date').value
+  const date = document.querySelector('#date').value.trim()
 
   //check if input country and waether value are empty
   if (country !== '' && weatherCondition !== '' && date !== '') {
@@ -31,7 +31,7 @@ function generate() {
     getWeather(baseUrl, country, apiKey).then((data) => {
       //post current weather data
       postWeather('/postData', {
-        temperature: data.main.temp,
+        temperature: tempconvertion(data.main.temp),
         userResponse: weatherCondition,
         date: date,
       })
@@ -113,7 +113,7 @@ const updateUi = async () => {
     const weather = await response.json()
     document.querySelector(
       '.temp'
-    ).innerHTML = `temperature: <span>${weather.temperature} degrees Celsius</span>`
+    ).innerHTML = `temperature: <span>${weather.temperature}&deg;C</span>`
     document.querySelector('.resp').innerHTML = `How is the weather today?
     <span>${weather.userResponse}</span>`
     document.querySelector(
@@ -121,5 +121,14 @@ const updateUi = async () => {
     ).innerHTML = `Date: <span>${weather.date}</span>`
   } catch (err) {
     console.log(err)
+  }
+}
+
+// helper function to convert temperature from Kelvin to Celsius
+function tempconvertion(temp) {
+  if (temp < 0) {
+    return 'below absolute zero (0 K)'
+  } else {
+    return (temp - 273.15).toFixed(2)
   }
 }
